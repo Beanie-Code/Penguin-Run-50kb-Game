@@ -70,7 +70,7 @@ https://github.com/user-attachments/assets/e0b06421-bec0-426e-8581-2786312d8f3a
 
 
 
-
+The actual game is in 4:3, but OBS with the settings I had stretched the video to 16:9
 
 License & Terms
 
