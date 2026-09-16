@@ -9,6 +9,7 @@
 
 //keep in mind I forgot about this project in May then came back to it in late august. So if some stuff is inconsistant that's why
 // Especially since I kind of forgot my programming conventions for this File.
+//Everything in this file like sound, data, and how it was coded was entirely by me the Creator. Therefore I own Copyright over all assets in this file too.
 
 
 // Game States 0-4 are being used as of 2026-09-02
@@ -1602,7 +1603,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR pCmdLine, 
                         }
                     }
                 }
-                FinalScore = Unsigned_round(current_pixelmove);
+                if(!collision_detection(playerX, playerY, playerW, playerH, (walls[i].x - current_pixelmove), 168, 8, 16) && !CollisionBefore && !player_state) {
+                    OnGround = 0;
+                }
+                
             }
             //Bullet Logic
             for(unsigned char i = 0; i < bulletNum; i++){ // Active logic
@@ -1630,6 +1634,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR pCmdLine, 
                     }
                 }
             }
+
+            FinalScore = Unsigned_round(current_pixelmove);
 
         }
 
